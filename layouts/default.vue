@@ -6,6 +6,7 @@
     <div class="w-ful text-center footer">
       Designed & Built by Ala Eddine Debbache
     </div>
+    <div class="bg-gradient"></div>
   </div>
 </template>
 
@@ -22,13 +23,23 @@ export default {
 .app {
   padding: 0 10%;
   padding-bottom: 20px;
-  background: url("../assets/images/background.png"),
-    url("../assets/images/Pattern.png");
+  background: url("../assets/images/Pattern.png");
   /* background-size: 0%; */
-  background-position: 0 0, top right;
+  background-position: top right;
   background-repeat: no-repeat;
-  background-attachment: fixed, scroll;
-  background-size: auto, 45%;
+  background-attachment: scroll;
+  background-size: 45%;
+}
+.bg-gradient {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: -50%;
+  bottom: -40%;
+  border-radius: 50%;
+  background: rgba(9, 88, 133, 0.8);
+  filter: blur(150px);
+  z-index: -1;
 }
 .footer {
   margin-top: 200px;
