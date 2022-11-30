@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --blue: #095885;
+    --green: #14ADB8;
+    --white: #EEF1FC;
+    --background: #152238;
+    --dark_blue: #1c2d4a;
+}
+
+@font-face {
+    font-family: 'Share Tech';
+    src: url("../fonts/ShareTech-Regular.ttf");
+}
+@font-face {
+    font-family: 'Orbitron';
+    src: url("../fonts/Orbitron-SemiBold.ttf");
+}
+
+* {
+    font-family: 'Share Tech', sans-serif;
+    font-size: 22px;
+    color: var(--white);
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Orbitron', sans-serif;
+}
+
+h1{
+    font-size: 72px;
+}
+
+h2{
+    font-size: 42px;
+}
+
+h3 {
+    font-size: 28px;
+}
+
+p{
+    text-align: justify;
+}
+
+body {
+    background: var(--background);
+}
+
+.button{
+    display: block;
+    background: var(--green);
+    padding: 10px 30px;
+    border-radius: 5px;
+    max-width: fit-content;
+}
+
+.button-outline {
+    display: block;
+    border: 3px solid var(--green);
+    padding: 10px 30px;
+    border-radius: 5px;
+    max-width: fit-content;
+    transition: .3s;
+}
+
+.button-outline:hover{
+    background: var(--green);
+}
+
+.link {
+    margin: 25px 0;
+}
+.link * {
+    transition: 0.3s;
+}
+.link:hover * {
+    stroke: var(--green) !important;
+}
+
+.description {
+    width: 500px;
+}
+
+.margin-bottom {
+  margin-bottom: 30px;
+}
+
+
+.section-header {
+    margin-bottom: 50px;
+}
+.section-title-stroke {
+    position: relative;
+    font-size: 128px;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px;
+    color: var(--green);
+    opacity: 0.3;
+    margin: 0;
+    line-height: 100%;
+    z-index: -1;
+    margin-top: -128px;
+    margin-left: -50px;
+    z-index: 1;
+}
+.section-title {
+    position: relative;
+    white-space: nowrap;
+    z-index: 10;
+}
+
+
+
+/* customizing the scroll bar */
+::-webkit-scrollbar {
+    display: none;
+}
