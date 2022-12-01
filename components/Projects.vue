@@ -139,4 +139,6 @@ export default {
 .project-image {
   width: 700px;
 }
+
+/* 1600 */
 </style>

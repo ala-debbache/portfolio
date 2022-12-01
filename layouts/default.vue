@@ -21,6 +21,8 @@ export default {
 
 <style>
 .app {
+  max-width: 100%;
+  overflow: hidden !important;
   padding: 0 10%;
   padding-bottom: 20px;
   background: url("../assets/images/Pattern.png");
@@ -44,5 +46,8 @@ export default {
 .footer {
   margin-top: 200px;
   font-size: 16px;
+}
+
+@media screen and (max-width: 1200px) {
 }
 </style>

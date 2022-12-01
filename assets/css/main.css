@@ -118,3 +118,26 @@ body {
 ::-webkit-scrollbar {
     display: none;
 }
+
+
+
+@media screen and (max-width: 1200px) {
+    * {
+        font-size: 20px;
+    }
+
+    h1{
+        font-size: 64px;
+    }
+    
+    h2{
+        font-size: 36px;
+    }
+    
+    h3 {
+        font-size: 22px;
+    }
+    .section-title-stroke{
+        font-size: 80px;
+    }
+}
