@@ -27,25 +27,25 @@
                 >{{ tech }}</span
               >
             </div>
+            <div class="flex links">
+              <a :href="project.github" class="project-link" target="_blanck">
+                <inline-svg
+                  :src="require('@/assets/icons/github.svg')"
+                  width="28"
+                  height="28"
+                  aria-label="Github"
+                ></inline-svg
+              ></a>
+              <a :href="project.link" class="project-link" target="_blanck">
+                <inline-svg
+                  :src="require('@/assets/icons/link.svg')"
+                  width="28"
+                  height="28"
+                  aria-label="Link"
+                ></inline-svg
+              ></a>
+            </div>
           </div>
-        </div>
-        <div class="flex links">
-          <a :href="project.github" class="project-link" target="_blanck">
-            <inline-svg
-              :src="require('@/assets/icons/github.svg')"
-              width="28"
-              height="28"
-              aria-label="Github"
-            ></inline-svg
-          ></a>
-          <a :href="project.link" class="project-link" target="_blanck">
-            <inline-svg
-              :src="require('@/assets/icons/link.svg')"
-              width="28"
-              height="28"
-              aria-label="Link"
-            ></inline-svg
-          ></a>
         </div>
         <div class="project-image flex justify-center">
           <img
@@ -143,6 +143,20 @@ export default {
 }
 .project-image {
   width: 700px;
+}
+
+@media screen and (min-width: 1600px) {
+  .project-description,
+  .project-tech-stack {
+    width: 600px;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  .project-description,
+  .project-tech-stack {
+    width: 700px;
+  }
 }
 
 @media screen and (max-width: 1600px) {

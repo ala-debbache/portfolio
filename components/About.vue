@@ -140,6 +140,17 @@ export default {
   font-size: 18px;
 }
 
+@media screen and (min-width: 1600px) {
+  .image {
+    width: 400px;
+  }
+  .bg {
+    height: 400px;
+    margin-left: -360px;
+    margin-top: 25px;
+  }
+}
+
 @media screen and (max-width: 1200px) {
   .image {
     width: 250px;

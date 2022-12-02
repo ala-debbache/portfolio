@@ -109,6 +109,18 @@ body {
     display: none;
 }
 
+@media screen and (min-width: 1600px) {
+.description {
+    width: 600px;
+}
+}
+
+@media screen and (min-width: 1800px) {
+.description {
+    width: 700px;
+}
+}
+
 
 
 @media screen and (max-width: 1200px) {

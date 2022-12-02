@@ -44,7 +44,7 @@ export default {
 
 <style>
 .footer {
-  margin-top: 200px;
+  margin-top: 100px;
   font-size: 16px;
 }
 .footer-links {
