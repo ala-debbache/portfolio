@@ -29,26 +29,30 @@
           <span>debbacheala2@gmail.com</span>
         </li>
         <li class="flex info">
-          <inline-svg
-            :src="require('@/assets/icons/github.svg')"
-            width="28"
-            height="28"
-            aria-label="Github"
-          ></inline-svg>
-
-          <inline-svg
-            :src="require('@/assets/icons/linkedin.svg')"
-            width="28"
-            height="28"
-            aria-label="Github"
-          ></inline-svg>
-
-          <inline-svg
-            :src="require('@/assets/icons/twitter.svg')"
-            width="28"
-            height="28"
-            aria-label="Github"
-          ></inline-svg>
+          <a href="http://linkedin.com" target="_blank" class="contact-link"
+            ><inline-svg
+              :src="require('@/assets/icons/linkedin.svg')"
+              width="28"
+              height="28"
+              aria-label="Github"
+            ></inline-svg
+          ></a>
+          <a href="http://github.com" target="_blank" class="contact-link"
+            ><inline-svg
+              :src="require('@/assets/icons/github.svg')"
+              width="28"
+              height="28"
+              aria-label="Github"
+            ></inline-svg
+          ></a>
+          <a href="http://twitter.com" target="_blank" class="contact-link"
+            ><inline-svg
+              :src="require('@/assets/icons/twitter.svg')"
+              width="28"
+              height="28"
+              aria-label="Github"
+            ></inline-svg
+          ></a>
         </li>
       </ul>
     </div>
@@ -75,5 +79,32 @@ export default {
 }
 .info {
   gap: 15px;
+}
+
+@media screen and (max-width: 1200px) {
+  .contact {
+    margin-top: 150px;
+  }
+  .contact-link svg {
+    width: 24px;
+    height: 24px;
+  }
+  .info svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .detail {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contact {
+    margin-top: 100px;
+  }
 }
 </style>

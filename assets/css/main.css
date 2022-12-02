@@ -70,16 +70,6 @@ body {
     background: var(--green);
 }
 
-.link {
-    margin: 25px 0;
-}
-.link * {
-    transition: 0.3s;
-}
-.link:hover * {
-    stroke: var(--green) !important;
-}
-
 .description {
     width: 500px;
 }
@@ -125,7 +115,18 @@ body {
     * {
         font-size: 20px;
     }
+    .section-title-stroke{
+        font-size: 100px;
+        margin-top: -106px;
+        margin-left: -30px;
+    }
 
+    .description {
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
     h1{
         font-size: 64px;
     }
@@ -139,5 +140,34 @@ body {
     }
     .section-title-stroke{
         font-size: 80px;
+        margin-top: -87px;
+        margin-left: -30px;
+    }
+
+    .description {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    * {
+        font-size: 18px;
+    }
+
+    h1{
+        font-size: 48px;
+    }
+    
+    h2{
+        font-size: 28px;
+    }
+    .section-title-stroke{
+        font-size: 54px;
+        margin-top: -59px;
+        margin-left: -20px;
+    }
+
+    .description {
+        width: 100%;
     }
 }

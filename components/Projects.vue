@@ -11,39 +11,43 @@
         class="flex justify-between project"
       >
         <div class="project-details">
-          <h3 class="project-title">{{ project.title }}</h3>
-          <p class="project-description">
-            {{ project.description }}
-          </p>
-          <h3 class="tech-stack">Tech Stack</h3>
-          <div class="flex flex-wrap project-tech-stack">
-            <span
-              v-for="(tech, index) in project.techStack"
-              :key="index"
-              class="tech"
-              >{{ tech }}</span
-            >
+          <div class="project-description-details">
+            <h3 class="project-title">{{ project.title }}</h3>
+            <p class="project-description">
+              {{ project.description }}
+            </p>
           </div>
-          <div class="flex links">
-            <a :href="project.github" target="_blanck">
-              <inline-svg
-                :src="require('@/assets/icons/github.svg')"
-                width="28"
-                height="28"
-                aria-label="Github"
-              ></inline-svg
-            ></a>
-            <a :href="project.link" target="_blanck">
-              <inline-svg
-                :src="require('@/assets/icons/link.svg')"
-                width="28"
-                height="28"
-                aria-label="Link"
-              ></inline-svg
-            ></a>
+          <div class="tech-stack-details">
+            <h3 class="tech-stack">Tech Stack</h3>
+            <div class="flex flex-wrap project-tech-stack">
+              <span
+                v-for="(tech, index) in project.techStack"
+                :key="index"
+                class="tech"
+                >{{ tech }}</span
+              >
+            </div>
           </div>
         </div>
-        <div class="project-image">
+        <div class="flex links">
+          <a :href="project.github" class="project-link" target="_blanck">
+            <inline-svg
+              :src="require('@/assets/icons/github.svg')"
+              width="28"
+              height="28"
+              aria-label="Github"
+            ></inline-svg
+          ></a>
+          <a :href="project.link" class="project-link" target="_blanck">
+            <inline-svg
+              :src="require('@/assets/icons/link.svg')"
+              width="28"
+              height="28"
+              aria-label="Link"
+            ></inline-svg
+          ></a>
+        </div>
+        <div class="project-image flex justify-center">
           <img
             :src="require(`@/assets/images/projects/${project.image}`)"
             :alt="project.title + ' image'"
@@ -135,10 +139,65 @@ export default {
 }
 .links {
   gap: 20px;
+  margin-bottom: 30px;
 }
 .project-image {
   width: 700px;
 }
 
-/* 1600 */
+@media screen and (max-width: 1600px) {
+  .project {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .project-details {
+    display: flex;
+    justify-content: space-between;
+  }
+  .project-image {
+    width: 100%;
+  }
+  .project-image img {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .project-tech-stack {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .projects {
+    margin-top: 150px;
+  }
+  .projects-list {
+    gap: 100px;
+  }
+  .project-details {
+    flex-direction: column;
+  }
+  .project-description,
+  .project-tech-stack {
+    width: 80%;
+  }
+  .project-image img {
+    width: 100%;
+  }
+  .project-link svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .projects {
+    margin-top: 100px;
+  }
+  .project-description,
+  .project-tech-stack {
+    width: 100%;
+  }
+}
 </style>

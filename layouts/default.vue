@@ -3,9 +3,7 @@
     <NavBar />
     <Nuxt />
     <SocialLinks />
-    <div class="w-ful text-center footer">
-      Designed & Built by Ala Eddine Debbache
-    </div>
+    <Footer />
     <div class="bg-gradient"></div>
   </div>
 </template>
@@ -13,9 +11,10 @@
 <script>
 import NavBar from "./partials/NavBar.vue";
 import SocialLinks from "./partials/SocialLinks.vue";
+import Footer from "./partials/Footer.vue";
 export default {
   name: "Layout",
-  components: { NavBar, SocialLinks },
+  components: { NavBar, SocialLinks, Footer },
 };
 </script>
 
@@ -43,11 +42,16 @@ export default {
   filter: blur(150px);
   z-index: -1;
 }
-.footer {
-  margin-top: 200px;
-  font-size: 16px;
-}
 
 @media screen and (max-width: 1200px) {
+  .app {
+    background-size: 60%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .app {
+    background-size: 80%;
+  }
 }
 </style>

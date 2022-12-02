@@ -4,8 +4,8 @@
       <h2 class="section-title">About me</h2>
       <h1 class="section-title-stroke">ABOUT</h1>
     </div>
-    <div class="content flex justify-between items-center w-full">
-      <div class="w-1/2">
+    <div class="content flex justify-between w-full">
+      <div class="w-1/2 about-details">
         <p class="description" style="margin-bottom: 20px">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -80,7 +80,7 @@
         </div>
         <a href="#" target="_blank" class="button-outline">Download my cv</a>
       </div>
-      <div class="flex justify-center items-start w-1/2">
+      <div class="flex justify-center items-start w-1/2 about-image">
         <img
           src="@/assets/images/my-image.png"
           class="position-relative image"
@@ -138,5 +138,44 @@ export default {
 }
 .skill span {
   font-size: 18px;
+}
+
+@media screen and (max-width: 1200px) {
+  .image {
+    width: 250px;
+  }
+  .bg {
+    height: 250px;
+    margin-left: -225px;
+    margin-top: 25px;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .content {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .skills {
+    gap: 100px;
+  }
+  .about-details,
+  .about-image {
+    width: 100%;
+  }
+  .image {
+    width: 300px;
+  }
+  .bg {
+    height: 300px;
+    margin-left: -265px;
+    margin-top: 25px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer-links {
+    display: flex;
+  }
 }
 </style>

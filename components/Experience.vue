@@ -112,7 +112,12 @@ export default {
   font-size: 18px;
 }
 
-/* responsive */
+@media (max-width: 1200px) {
+  .experience {
+    margin-top: 150px;
+  }
+}
+
 @media (max-width: 1024px) {
   .timeline-items::before {
     left: 7px;
@@ -126,6 +131,12 @@ export default {
   }
   .timeline-dot {
     left: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .experience {
+    margin-top: 100px;
   }
 }
 </style>
