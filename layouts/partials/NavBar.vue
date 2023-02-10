@@ -7,8 +7,9 @@
           v-for="(link, index) in links"
           :key="index"
           class="nav-link lg:mr-8"
+          @click="$nuxt.$emit('scroll-to', link.to)"
         >
-          <nuxt-link :to="link.to">{{ link.name }}</nuxt-link>
+          {{ link.name }}
         </li>
         <li>
           <a
@@ -22,8 +23,13 @@
       </ul>
 
       <ul id="sidebar" class="flex w-full flex-col items-center sidebar">
-        <li v-for="(link, index) in links" :key="index" class="nav-link">
-          <nuxt-link :to="link.to">{{ link.name }}</nuxt-link>
+        <li
+          v-for="(link, index) in links"
+          :key="index"
+          class="nav-link"
+          @click="scrollTo(link.to)"
+        >
+          {{ link.name }}
         </li>
         <li>
           <a
@@ -69,23 +75,23 @@ export default {
       links: [
         {
           name: "Home",
-          to: "/",
+          to: "hero",
         },
         {
           name: "About",
-          to: "/about",
+          to: "about",
         },
         {
           name: "Experience",
-          to: "/experience",
+          to: "experience",
         },
         {
           name: "Projects",
-          to: "/projects",
+          to: "projects",
         },
         {
           name: "Contact",
-          to: "/contact",
+          to: "contact",
         },
       ],
     };
@@ -98,6 +104,10 @@ export default {
     closeNav() {
       this.navToggle = false;
       document.getElementById("sidebar").style.top = "-500px";
+    },
+    scrollTo(section) {
+      this.$nuxt.$emit("scroll-to", section);
+      this.closeNav();
     },
   },
 };
